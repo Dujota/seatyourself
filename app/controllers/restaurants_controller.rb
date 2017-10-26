@@ -19,7 +19,7 @@ class RestaurantsController < ApplicationController
     @restaurant.user = current_user
     if @restaurant.save
       flash[:notice] = "Your Restaurant has been created"
-      redirect_to root_path
+      redirect_to new_restaurant_availability_path(@restaurant.id)
     else
       render :new
     end
