@@ -12,16 +12,21 @@ before_action :find_availability, only: [:edit, :update]
   def create
     #new_availability
     #find_restaurant
-    @availability =  Availability.new(availability_params)
-    @availability.restaurant_id = params[:restaurant_id]
+    @availabilities = params[:availability][:available_time]
+    @availabilities.each do |time|
+      if time == ""
+        next
+      end
+      availability =  Availability.new(available_time: time)
+      availability.restaurant_id = params[:restaurant_id]
 
-    if @availability.save
+      unless availability.save
+        render :new
+        return
+      end
+    end
       flash[:notice] = "Your Hours have been created"
       redirect_to root_path
-    else
-      render :new
-    end
-
   end
 
   def edit
