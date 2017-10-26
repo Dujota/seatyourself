@@ -26,31 +26,77 @@
       <% end %>
   </nav>
 
+
+
 <%= yield %>
 
-  <footer>
-
-    <h2>TEAM</h2>
-
-    <section class="creator">
-      <div class="info">
-        <h3>ANTONIO </h3>
-        <%= link_to "Linkedin", "https://www.linkedin.com/in/antoniomanzanares/", :target => "_blank" %>
-      </div>
-
-      <div class="info">
-        <h3>DENIS</h3>
-        <%= link_to "Linkedin", "https://www.linkedin.com/in/denis-sanchez-dujota-a717336b/", :target => "_blank" %>
-      </div>
-
-      <div class="info">
-        <h3>LAN PHAN</h3>
-        <%= link_to "Linkedin", "https://www.linkedin.com/in/lancphan/", :target => "_blank" %>
-      </div>
-
-    </section>
-
-  </footer>
 </div>
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-block">
+    <h4 class="card-title">Card title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+
+<footer>
+
+    <div class="container">
+      <h2 class="team">TEAM</h2>
+
+      <div class="creators">
+
+        <div class="creator-info">
+          <h3>Antlonio Manzanares</h3>
+          <p><%= link_to image_tag("linkedin-32x32.png"),"https://www.linkedin.com/in/antoniomanzanares/", :target => "_blank" %> </p>
+        </div>
+
+        <div class="creator-info">
+          <h3>DENIS SACHEZ DUJOTA</h3>
+          <div class="icon">
+            <p><%= link_to image_tag("linkedin-32x32.png"), "https://www.linkedin.com/in/denis-sanchez-dujota-a717336b/", :target => "_blank" %></p>
+            <p>
+          </div>
+        </div>
+
+        <div class="creator-info">
+          <h3>LAN PHAN</h3>
+          <p><%= link_to image_tag("linkedin-32x32.png"), "https://www.linkedin.com/in/lancphan/", :target => "_blank" %></p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </footer>
+  <!-- <div class="container col-12">
+
+    <nav class="nav nav-pills nav-fill">
+
+      <h4>TEAM</h4>
+      <div class="teammate">
+
+        <div class="creator">
+          <li class="nav-item nav-link active">ANTONIO MANZANARES</li>
+          <%= link_to "Linkedin", "https://www.linkedin.com/in/antoniomanzanares/",class: "navbar-brand",:target => "_blank" %>
+        </div>
+
+        <div class="creator">
+          <li class="nav-item nav-link active">DENIS SACHEZ DUJOTA</li>
+          <%= link_to "Linkedin", "https://www.linkedin.com/in/denis-sanchez-dujota-a717336b/", class: "navbar-brand",:target => "_blank" %>
+        </div>
+
+        <div class="creator">
+          <li class="nav-item nav-link active">LAN PHAN</li>
+          <%= link_to "Linkedin", "https://www.linkedin.com/in/lancphan/", class:"navbar-brand",:target => "_blank" %>
+        </div>
+
+      </div>
+    </nav>
+  </div> -->
+
+
 </body>
 </html>
