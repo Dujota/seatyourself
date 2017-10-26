@@ -1,0 +1,32 @@
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  // Set the footer height here
+  height: 165px;
+  background-color: #f3f3f3;
+}
+
+h2.team {
+  text-align: center;
+
+}
+
+div.creators{
+  text-align: center;
+  height: 50px;
+}
+
+div.creator-info{
+  display: inline-block;
+  float:left;
+  margin: 0 67px;
+}
+
+div.icon{
+  text-align: center;
+}
+
+.container.col-12{
+  text-align: center;
+}
