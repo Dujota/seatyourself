@@ -1,8 +1,25 @@
-<h1>Welcome to Seat Yourself</h1>
-<ul>
-<% @restaurants.each do |restaurant| %>
-<li>
-<%= link_to(restaurant.name, restaurant_path(restaurant.id))%>
-</li>
+<h1 class="welcome">Welcome to Seat Yourself</h1>
+
+
+<div class="container col-12">
+  <div class="restaurant-list">
+    <% @restaurants.each do |restaurant| %>
+    
+      <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-block">
+
+        <h4 class="card-title"><%= restaurant.name%></h4>
+        <p class="card-text"><%=restaurant.summary %></p>
+
+        <a href="<%=restaurant_path(restaurant.id) %>" class="btn btn-primary">More Details</a>
+
+      </div>
+
+    </div>
+
 <% end %>
-</ul>
+
+  </div>
+
+</div>
