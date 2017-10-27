@@ -1,0 +1,5 @@
+<%= form_for [@restaurant, @availability]  do |f| %>
+  <p> <%= f.select :available_time, options_for_select(hours_intervals), {}, {multiple: true, size: 24, style: "width: 10%;"} %></p>
+  <p><%= f.submit %></p>
+
+<% end %>

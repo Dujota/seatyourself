@@ -30,7 +30,10 @@ class ApplicationController < ActionController::Base
   helper_method :restaurant_owner
 
   def hours_intervals
-    hours = [ "4:00 AM",
+    hours = [ "1:00 AM",
+      "2:00 AM",
+      "3:00 AM",
+      "4:00 AM",
       "5:00 AM",
       "6:00 AM",
       "7:00 AM",
@@ -50,10 +53,7 @@ class ApplicationController < ActionController::Base
       "9:00 PM",
       "10:00 PM",
       "11:00 PM",
-      "12:00 AM",
-      "1:00 AM",
-      "2:00 AM",
-      "3:00 AM"
+      "12:00 AM"
     ]
   end
 

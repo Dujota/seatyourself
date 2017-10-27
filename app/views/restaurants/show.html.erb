@@ -10,7 +10,7 @@
     <p>Price Range:    <%= @restaurant.price_range %> </p>
     <p>Summary:        <%= @restaurant.summary %> </p>
     <p>Menu:           <%= @restaurant.menu %> </p>
-
+    <p>Opening hours: from <%= @restaurant.availabilities.first.available_time %> to <%= @restaurant.availabilities.last.available_time %> </p>
   </div>
 
   <div class="book-table">
@@ -20,11 +20,14 @@
     |
     <%= link_to 'All Reservations', restaurant_reservations_path(@restaurant.id) %>
     |
-    <%= link_to "Edit", edit_restaurant_path%>
-    | <%= link_to 'Remove Restaurant', restaurant_path, method: :delete, data:{confirm: "Are you sure you want to remove your restaurant"} %>
+    <%= link_to "Edit Restaurant details", edit_restaurant_path%>
+    |
+    <%= link_to "Edit Hours", edit_restaurant_availability_path(@restaurant.id)%>
+    |
+    <%= link_to 'Remove Restaurant', restaurant_path, method: :delete, data:{confirm: "Are you sure you want to remove your restaurant"} %>
 
     <% end %>
-    
+
   </div>
 
 </section>

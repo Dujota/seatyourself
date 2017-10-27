@@ -1,2 +1,7 @@
-<h1>Availabilities#edit</h1>
-<p>Find me in app/views/availabilities/edit.html.erb</p>
+<h1>Edit opening hours for <%= @restaurant.name %> </h1>
+
+
+
+<div>
+  <%= render 'form_for_hours', restaurant: @restaurant %>
+</div>
